@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Screens
+
+<table class="md-table" style="border:none">
+    <tbody style="border:none">
+        <tr style="border:none">
+            <td style="border:none"><img src="public/sampleScreens/loginScreen.png" height="500" /></td>
+            <td style="border:none"><img src="public/sampleScreens/signUpScreen.png "height="500" /></td>
+        </tr>
+        <tr style="border:none">
+            <td style="border:none">
+                <p align-content="center"><i>SignUp screen</i></p>
+            </td>
+            <td style="border:none">
+                <p align-content="center"><i>Login screen</i></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
