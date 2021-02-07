@@ -73,8 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Screens
 
-<img src="public/sampleScreens/loginScreen.png" height="100" width="100" />
-<img src="public/sampleScreens/signUpScreen.png "height="100" width="100" />
+<img src="public/sampleScreens/loginScreen.png" height="600" width="600" />
+<img src="public/sampleScreens/signUpScreen.png "height="600" width="600" />
 
 <table class="md-table" style="border:none">
     <tbody style="border:none">
