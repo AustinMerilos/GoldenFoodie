@@ -1,6 +1,5 @@
 # GoldenFoodieWebsite
 
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -77,15 +76,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <table class="md-table" style="border:none">
     <tbody style="border:none">
         <tr style="border:none">
-            <td style="border:none"><img src="public/sampleScreens/loginScreen.png" height="500" /></td>
-            <td style="border:none"><img src="public/sampleScreens/signUpScreen.png "height="500" /></td>
+            <td style="border:none"><img src="public/sampleScreens/loginScreen.png" height="600" /></td>
+            <td style="border:none"><img src="public/sampleScreens/signUpScreen.png "height="600" /></td>
         </tr>
         <tr style="border:none">
             <td style="border:none">
-                <p align-content="center"><i>SignUp screen</i></p>
+                <p align-content="center"><i>Login  screen</i></p>
             </td>
             <td style="border:none">
-                <p align-content="center"><i>Login screen</i></p>
+                <p align-content="center"><i>SignUp screen</i></p>
             </td>
         </tr>
     </tbody>
