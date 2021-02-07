@@ -1,38 +1,78 @@
-.App {
+.logIn-form {
+  background-color: #ffffff;
+  width: 400px;
+  height: 400px;
+  margin: 7px auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.login-sign {
   text-align: center;
+  color: lightsalmon;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-text {
+  text-align: center;
+  color: lightsalmon;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  margin-top: 0%;
+  margin-bottom: 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sign {
+  text-align: center;
+  color: lightsalmon;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  margin-top: 0%;
+  margin-bottom: 1%;
+}
+.sign-up {
+  text-align: center;
+  color: lightsalmon;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  margin-top: 0%;
+  margin-bottom: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit {
+  cursor: pointer;
+  border-radius: 5em;
+  color: lightsalmon;
+  background: linear-gradient(to right, #ffecd2 0%, white 200%);
+  border: 0;
+  width: 380px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  border: none;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
 }

@@ -1,0 +1,66 @@
+.body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  background-image: linear-gradient(to right, white 0%, lightsalmon 100%);
+}
+.nav {
+  text-align: left;
+  vertical-align: bottom;
+  line-height: 120px;
+  margin-left: 160px;
+}
+.nav li {
+  display: inline-block;
+  font-size: 28px;
+  font-family: "Ubuntu", sans-serif;
+  margin: 25px;
+  vertical-align: bottom;
+  line-height: normal;
+}
+.logo {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  margin: 0px 15px 15px 0px;
+}
+.google {
+  width: 25px;
+  display: inline-block;
+  margin-right: 5%;
+}
+.header {
+  display: block;
+}
+
+.sign-out {
+  text-align: center;
+  color: lightsalmon;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  margin: 10%;
+  align-self: center;
+  margin-bottom: 10%;
+}
+
+.title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: italic;
+  color: lightsalmon;
+
+  -webkit-text-stroke-color: white;
+  white-space: nowrap;
+  width: 10%;
+}
+.search-bar {
+  width: 20%;
+  border: none;
+  padding: 10px;
+}

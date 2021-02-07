@@ -1,0 +1,70 @@
+.Search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  background-image: linear-gradient(to right, white 0%, lightsalmon 100%);
+}
+
+.search-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 40%;
+  border: none;
+  padding: 10px;
+}
+.search-logo {
+  display: block;
+
+  margin-left: 10%;
+  margin-right: 10;
+  width: 15%;
+  left: 10px;
+  top: 10px;
+  margin: 0px 15px 15px 0px;
+}
+
+.search-button {
+  background: lightsalmon;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  color: white;
+}
+
+.recipes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  background-image: linear-gradient(to right, white 0%, lightsalmon 100%);
+}
+.title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: italic;
+  color: lightsalmon;
+
+  -webkit-text-stroke-color: white;
+  white-space: nowrap;
+  width: 10%;
+}
+.signOut-button {
+  padding: 10px;
+}
