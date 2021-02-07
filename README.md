@@ -76,8 +76,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <table class="md-table" style="border:none">
     <tbody style="border:none">
         <tr style="border:none">
-            <td style="border:none"><img src="public/sampleScreens/loginScreen.png" height="500" width="500" /></td>
-            <td style="border:none"><img src="public/sampleScreens/signUpScreen.png "height="500" width="500" /></td>
+            <td style="border:none"><img src="public/sampleScreens/loginScreen.png" height="500" width="700" /></td>
+            <td style="border:none"><img src="public/sampleScreens/signUpScreen.png "height="500" width="700" /></td>
         </tr>
         <tr style="border:none">
             <td style="border:none">
