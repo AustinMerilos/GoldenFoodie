@@ -80,5 +80,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 <div float="left">
 <img 
-src="public/sampleScreens/searchScreenEx.gif"height="auto" width="500" />
-<img src="public/sampleScreens/URLExample.gif"height="auto" width="500" /></div>
+src="public/sampleScreens/searchScreenEx.gif"height="auto" width="400" />
+<img src="public/sampleScreens/URLExample.gif"height="auto" width="400" /></div>
