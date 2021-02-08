@@ -1,4 +1,10 @@
+<div flex="center">
+<img src="src/Logo.png" alt="Logo" width="400"/>
+</div>
+
 # GoldenFoodieWebsite
+
+A simple website to search for recipes, built using [React](https://reactjs.org). This website uses email and password authentication to sign in by using Google's [firebase](https://firebase.google.com).This website can search for recipes from the [Edamam](https://www.edamam.com) API database which serves as the backend.
 
 # Getting Started with Create React App
 
@@ -71,14 +77,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+## Documentation
+
+[Firebase Authentication](https://firebase.google.com/docs/auth).
+[Edamam recipe API](https://developer.edamam.com/edamam-docs-recipe-api).
+[React-router](https://reactrouter.com/web/guides/quick-start).
+[React-hooks](https://reactjs.org/docs/hooks-intro.html).
+
 ## Screens
 
-<p float="left">
+<div float="left">
 <img src="public/sampleScreens/loginScreen.png" height="auto" width="400" />
 <img src="public/sampleScreens/signUpScreen.png "height="auto" width="400" />
-<img src="public/sampleScreens/searchScreen.png"height="auto" width="400" /></p>
-
-<div float="left">
-<img 
+<img src="public/sampleScreens/searchScreen.png"height="auto" width="400" />
+<img
 src="public/sampleScreens/searchScreenEx.gif"height="auto" width="400" />
 <img src="public/sampleScreens/URLExample.gif"height="auto" width="400" /></div>
