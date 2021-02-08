@@ -1,4 +1,4 @@
-<div flex="center">
+<div align-content="center">
 <img src="src/Logo.png" alt="Logo" width="400"/>
 </div>
 
@@ -79,7 +79,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Documentation
 
-[Firebase Authentication](https://firebase.google.com/docs/auth).
+<p>[Firebase Authentication](https://firebase.google.com/docs/auth).</p>
 [Edamam recipe API](https://developer.edamam.com/edamam-docs-recipe-api).
 [React-router](https://reactrouter.com/web/guides/quick-start).
 [React-hooks](https://reactjs.org/docs/hooks-intro.html).
