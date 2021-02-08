@@ -74,11 +74,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Screens
 
 <p float="left">
-<img src="public/sampleScreens/loginScreen.png" height="auto" width="300" />
-<img src="public/sampleScreens/signUpScreen.png "height="auto" width="300" />
-<img src="public/sampleScreens/searchScreen.png"height="auto" width="300" /></p>
+<img src="public/sampleScreens/loginScreen.png" height="auto" width="400" />
+<img src="public/sampleScreens/signUpScreen.png "height="auto" width="400" />
+<img src="public/sampleScreens/searchScreen.png"height="auto" width="400" /></p>
 
 <div float="left">
 <img 
-src="public/sampleScreens/searchScreenEx.gif"height="auto" width="600" />
-<img src="public/sampleScreens/URLExample.gif"height="auto" width="600" /></div>
+src="public/sampleScreens/searchScreenEx.gif"height="auto" width="500" />
+<img src="public/sampleScreens/URLExample.gif"height="auto" width="500" /></div>
