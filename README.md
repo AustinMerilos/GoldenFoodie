@@ -73,24 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Screens
 
-<img src="public/sampleScreens/loginScreen.png" height="500" width="800" />
-<img src="public/sampleScreens/signUpScreen.png "height="500" width="800" />
-<img src="public/sampleScreens/searchScreen.png"height="500" width="800" /><img src="public/sampleScreens/searchScreenEx.gif"height="500" width="800" />
-<img src="public/sampleScreens/URLExample.gif"height="500" width="800" />
-
-<table class="md-table" style="border:none">
-    <tbody style="border:none">
-        <tr style="border:none">
-            <td style="border:none"><img src="public/sampleScreens/loginScreen.png" height="500" width="800" /></td>
-            <td style="border:none"><img src="public/sampleScreens/loginScreen.png" height="500" width="800" /></td>
-        </tr>
-        <tr style="border:none">
-            <td style="border:none">
-                <p text-align="center"><i>Splash screen</i></p>
-            </td>
-            <td style="border:none">
-                <p text-align="center"><i>Home screen</i></p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<p float="left">
+<img src="public/sampleScreens/loginScreen.png" height="500" width="100" />
+<img src="public/sampleScreens/signUpScreen.png "height="500" width="100" />
+<img src="public/sampleScreens/searchScreen.png"height="500" width="100" /><img src="public/sampleScreens/searchScreenEx.gif"height="500" width="100" />
+<img src="public/sampleScreens/URLExample.gif"height="500" width="100" /></p>
