@@ -36,6 +36,8 @@
   margin-top: 1rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
+
+  word-wrap: break-word;
 }
 .ingredient-text {
   font-size: 1.5rem;
