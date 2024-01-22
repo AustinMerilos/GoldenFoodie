@@ -9,12 +9,12 @@ import { GoSignOut } from "react-icons/go";
 
 //Add APP_ID and APP_KEY from EDAMAM
 const Search = () => {
-  const APP_ID = "****";
-  const APP_KEY = "****";
+  const APP_ID = "667c7766";
+  const APP_KEY = "ab67ef4dda17f3a86a1aac58f7b16f6c";
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("golden");
 
   useEffect(() => {
     getRecipes();
