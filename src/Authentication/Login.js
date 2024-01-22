@@ -80,8 +80,8 @@ const Login = ({ history }) => {
         >
           <img
             className="google"
-            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-            alt="google-logo"
+            src={process.env.PUBLIC_URL + "/googleLogo.png"}
+            alt="google logo"
           />
           Login With Google
         </button>
