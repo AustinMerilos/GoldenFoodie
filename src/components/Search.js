@@ -83,10 +83,14 @@ const Search = () => {
         </button>
 
         <div className="user-info">
-          {user && <span>Hello, {user.displayName || user.email}</span>}
-          <button onClick={handleSignOut}>
-            <GoSignOut size="24px" />
-            <>Sign Out</>
+          {user && (
+            <span className="user-greeting">
+              Hello, {user.displayName || user.email}
+            </span>
+          )}
+          <button className="signout-btn" onClick={handleSignOut}>
+            <GoSignOut size="20px" />
+            <span>Sign Out</span>
           </button>
         </div>
       </form>
