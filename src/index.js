@@ -23,8 +23,8 @@ const AppContent = ({ isLoggedIn }) => {
   const location = useLocation();
 
   const hideHeaderPaths = ["/search"];
-  const showHeader =
-    !hideHeaderPaths.includes(location.pathname.toLowerCase()) && isLoggedIn;
+  const currentPath = location.pathname.toLowerCase().replace(/\/$/, "");
+  const showHeader = !hideHeaderPaths.includes(currentPath);
 
   return (
     <>
@@ -43,7 +43,6 @@ const AppContent = ({ isLoggedIn }) => {
             }
           />
         ))}
-
         {routes.map((route) => (
           <Route key={route.path} path={route.path} element={<route.main />} />
         ))}

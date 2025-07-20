@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { GoSignOut } from "react-icons/go";
 
 import "./Search.css";
@@ -7,12 +7,15 @@ import Recipe from "./Recipe";
 import Logo from "../Logo.png";
 
 import { AuthContext } from "../index";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
 
 const Search = () => {
   const APP_ID = process.env.REACT_APP_EDAMAM_ID;
   const APP_KEY = process.env.REACT_APP_EDAMAM_KEY;
 
-  const { user } = useContext(AuthContext);
+  const { user, setLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
@@ -54,6 +57,16 @@ const Search = () => {
     setSearch("");
   };
 
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      setLoggedIn(false);
+      navigate("/login");
+    } catch (error) {
+      console.error("Sign out error:", error);
+    }
+  };
+
   return (
     <div className="Search">
       <form onSubmit={getSearch} className="search-form">
@@ -71,12 +84,10 @@ const Search = () => {
 
         <div className="user-info">
           {user && <span>Hello, {user.displayName || user.email}</span>}
-          <Link to="/">
-            <h4>
-              <GoSignOut size="24px" />
-              Sign Out
-            </h4>
-          </Link>
+          <button onClick={handleSignOut}>
+            <GoSignOut size="24px" />
+            <>Sign Out</>
+          </button>
         </div>
       </form>
 
