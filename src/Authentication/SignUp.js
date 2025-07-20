@@ -1,58 +1,52 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../index";
-import firebase from "firebase/app";
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
-import { withRouter } from "react-router-dom";
 
-const SignUp = ({ history }) => {
+import { auth } from "../firebase";
+import {
+  setPersistence,
+  browserSessionPersistence,
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setErrors] = useState("");
 
   const Auth = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleForm = (e) => {
     e.preventDefault();
-
-    firebase
-      .auth()
-      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
-      .then(() => {
-        firebase
-          .auth()
-          .createUserWithEmailAndPassword(email, password)
-          .then((res) => {
-            console.log(res);
-            history.push("/search");
-            if (res.user) Auth.setLoggedIn(true);
-          })
-          .catch((e) => {
-            setErrors(e.message);
-          });
-      });
+    setPersistence(auth, browserSessionPersistence)
+      .then(() => createUserWithEmailAndPassword(auth, email, password))
+      .then((res) => {
+        console.log(res);
+        if (res.user) Auth.setLoggedIn(true);
+        navigate("/search");
+      })
+      .catch((e) => setErrors(e.message));
   };
 
   const handleGoogleLogin = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-
-    firebase
-      .auth()
-      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
-      .then(() => {
-        firebase
-          .auth()
-          .signInWithPopup(provider)
-          .then((result) => {
-            console.log(result);
-            history.push("/search");
-            Auth.setLoggedIn(true);
-          })
-          .catch((e) => setErrors(e.message));
-      });
+    const provider = new GoogleAuthProvider();
+    setPersistence(auth, browserSessionPersistence)
+      .then(() => signInWithPopup(auth, provider))
+      .then((result) => {
+        console.log(result);
+        Auth.setLoggedIn(true);
+        navigate("/search");
+      })
+      .catch((e) => setErrors(e.message));
   };
 
   return (
     <div>
-      <form className="logIn-form " onSubmit={(e) => handleForm(e)}>
+      <form className="logIn-form" onSubmit={handleForm}>
         <h1 className="sign">SignUp</h1>
         <p className="sign-up">Please Enter a email and password</p>
         <input
@@ -74,12 +68,8 @@ const SignUp = ({ history }) => {
         <hr />
         <button className="submit" type="submit">
           Submit
-        </button>{" "}
-        <button
-          className="submit"
-          onClick={() => handleGoogleLogin()}
-          type="button"
-        >
+        </button>
+        <button className="submit" onClick={handleGoogleLogin} type="button">
           <img
             className="google"
             src={process.env.PUBLIC_URL + "/googleLogo.png"}
@@ -93,4 +83,4 @@ const SignUp = ({ history }) => {
   );
 };
 
-export default withRouter(SignUp);
+export default SignUp;

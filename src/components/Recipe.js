@@ -1,4 +1,3 @@
-import react from "react";
 import "./Recipe.css";
 
 const Recipe = ({ title, url, image, ingredients }) => {
@@ -10,7 +9,7 @@ const Recipe = ({ title, url, image, ingredients }) => {
       <ul className="ingredient-list">
         {ingredients.map((ingredient) => (
           <li className="ingredient-text">{ingredient.text}</li>
-        ))}{" "}
+        ))}
       </ul>
       <a
         className="source-text"
