@@ -20,8 +20,20 @@ html {
   min-height: 100vh;
   width: 100%;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   background: transparent;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffb88c, #de6262);
+  color: #fff;
 }
 
 .recipes {
