@@ -1,66 +1,111 @@
-.body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
-  background-image: linear-gradient(to right, white 0%, lightsalmon 100%);
-}
-.nav {
-  text-align: left;
-  vertical-align: bottom;
-  line-height: 120px;
-  margin-left: 160px;
-}
-.nav li {
-  display: inline-block;
-  font-size: 28px;
-  font-family: "Ubuntu", sans-serif;
-  margin: 25px;
-  vertical-align: bottom;
-  line-height: normal;
-}
-.logo {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  margin: 0px 15px 15px 0px;
-}
-.google {
-  width: 25px;
-  display: inline-block;
-  margin-right: 5%;
-}
-.header {
-  display: block;
+.logIn-form,
+.signUp-form {
+  background-color: #fff;
+  max-width: 400px;
+  width: 90%;
+  margin: 5vh auto;
+  border-radius: 1.5em;
+  box-shadow: 0 11px 35px rgba(0, 0, 0, 0.14);
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.sign-out {
+.login-sign,
+.sign {
   text-align: center;
   color: lightsalmon;
   font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: 23px;
-  margin: 10%;
-  align-self: center;
-  margin-bottom: 10%;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
 }
 
-.title {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-style: italic;
+.login-text,
+.sign-up {
+  text-align: center;
   color: lightsalmon;
-
-  -webkit-text-stroke-color: white;
-  white-space: nowrap;
-  width: 10%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin: 0 0 2rem 0;
 }
+
 .search-bar {
-  width: 20%;
-  border: none;
-  padding: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: lightsalmon;
+  box-shadow: 0 0 8px lightsalmon;
+}
+
+.submit {
+  margin-top: 10px;
+  width: 100%;
+  font-weight: 700;
+}
+
+.google {
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+span {
+  color: #b00020;
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.nav li {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: lightsalmon;
+  cursor: pointer;
+}
+
+.nav li:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  height: 100px;
+}
+
+.sign-out {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: lightsalmon;
+  cursor: pointer;
+}
+
+.sign-out:hover {
+  text-decoration: underline;
 }

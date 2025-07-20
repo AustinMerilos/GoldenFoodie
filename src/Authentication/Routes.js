@@ -3,8 +3,8 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 
 const routes = [
-  { name: "SignUp", path: "/SignUp", exact: true, main: () => <SignUp /> },
-  { name: "Login", path: "/", exact: true, main: () => <Login /> },
+  { name: "Login", path: "/login", exact: true, main: () => <Login /> },
+  { name: "SignUp", path: "/", exact: true, main: () => <SignUp /> },
 ];
 
 export default routes;

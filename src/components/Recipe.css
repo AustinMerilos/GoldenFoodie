@@ -1,51 +1,63 @@
 .recipe {
-  width: 30rem;
-  margin: 3rem;
+  background-color: #fff;
+  width: 320px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  padding: 2rem;
-  padding-top: 1%;
-  position: relative;
-  border-radius: 0.5rem;
-  box-shadow: 2rem 3rem 5rem rgb(229, 206, 170);
+  border-radius: 1rem;
+  box-shadow: 0 12px 20px rgba(255, 153, 102, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem;
 }
+
+.recipe:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(255, 153, 102, 0.35);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
 .recipes-title {
   text-align: center;
-  color: lightsalmon;
+  color: #ff9966;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  padding: 1%;
+  font-size: 1.6rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
 }
-.image {
-  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.8),
-    inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -7px 0 rgba(0, 0, 0, 0.6),
-    inset 0 -9px 0 rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.8),
-    inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -7px 0 rgba(0, 0, 0, 0.6),
-    inset 0 -9px 0 rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.8),
-    inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -7px 0 rgba(0, 0, 0, 0.6),
-    inset 0 -9px 0 rgba(255, 255, 255, 0.3);
 
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-}
 .ingredient-list {
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #fce7d6;
+  flex-grow: 1;
+  overflow-wrap: break-word;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
 
-  word-wrap: break-word;
-}
 .ingredient-text {
-  font-size: 1.5rem;
-  position: relative;
-  padding-bottom: 3%;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #6b4c3b;
 }
+
 .source-text {
-  font-size: 1.2rem;
-  padding: 1%;
-  margin-bottom: 5%;
+  font-size: 0.875rem;
+  padding: 0 1rem 1rem 1rem;
+  color: #d86e3f;
+  font-weight: 600;
+  text-align: right;
+  font-style: italic;
 }

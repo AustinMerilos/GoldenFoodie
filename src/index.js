@@ -1,63 +1,86 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import { createRoot } from "react-dom/client";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
+
 import routes from "./Authentication/Routes";
-import Header from "./Authentication/Header";
-import "./App.css";
-
 import protectedRoutes from "./Authentication/ProtectedRoutes";
+import Header from "./Authentication/Header";
 
-import firebase from "firebase/app";
-import firebaseConfig from "./firebaseConfig";
-import ProtectedRouteHoc from "./Authentication/ProtectedRouteHOC";
+import { auth } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
-firebase.initializeApp(firebaseConfig);
+import "./App.css";
 
 export const AuthContext = React.createContext(null);
 
-const App = () => {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+const AppContent = ({ isLoggedIn }) => {
+  const location = useLocation();
 
-  function readSession() {
-    const user = window.sessionStorage.getItem(
-      `firebase:authUser:${firebaseConfig.apiKey}:[DEFAULT]`
-    );
-    if (user) setLoggedIn(true);
-  }
-  useEffect(() => {
-    readSession();
-  }, []);
+  const hideHeaderPaths = ["/search"];
+  const showHeader =
+    !hideHeaderPaths.includes(location.pathname.toLowerCase()) && isLoggedIn;
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setLoggedIn }}>
+    <>
+      {showHeader && <Header isLoggedIn={isLoggedIn} />}
+      <Routes>
+        {protectedRoutes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={
+              isLoggedIn || route.public ? (
+                <route.main />
+              ) : (
+                <Navigate to="/" replace />
+              )
+            }
+          />
+        ))}
+
+        {routes.map((route) => (
+          <Route key={route.path} path={route.path} element={<route.main />} />
+        ))}
+      </Routes>
+    </>
+  );
+};
+
+const App = () => {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+      setLoggedIn(!!user);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <AuthContext.Provider value={{ isLoggedIn, setLoggedIn, user }}>
       <div className="body">
         <Router>
-          <Header isLoggedIn={isLoggedIn}></Header>
-          <Switch>
-            {protectedRoutes.map((route) => (
-              <ProtectedRouteHoc
-                key={route.path}
-                isLoggedIn={isLoggedIn}
-                path={route.path}
-                component={route.main}
-                exact={route.exact}
-                public={route.public}
-              />
-            ))}
-            {routes.map((route) => (
-              <Route
-                key={route.path}
-                path={route.path}
-                exact={route.exact}
-                component={route.main}
-              />
-            ))}
-          </Switch>
+          <AppContent isLoggedIn={isLoggedIn} />
         </Router>
       </div>
     </AuthContext.Provider>
   );
 };
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);

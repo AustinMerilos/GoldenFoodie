@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
-import routes from "./Routes";
+import React from "react";
 import { Link } from "react-router-dom";
-
+import "./Auth.css";
 import Logo from "../Logo.png";
 
 const Header = () => {
   return (
-    <div className={"header"}>
+    <div className="header">
       <img className="logo" src={Logo} alt="Logo" />
       <ul className="nav">
-        {routes.map((route, i) => (
-          <li key={i}>
-            <Link to={route.path}>{route.name}</Link>
-          </li>
-        ))}
+        <li>
+          <Link to="/">SignUp</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
       </ul>
     </div>
   );
